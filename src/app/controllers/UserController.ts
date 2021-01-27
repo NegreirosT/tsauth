@@ -1,10 +1,16 @@
 import { Request, Response } from 'express';
 import { getRepository } from 'typeorm';
+import { classToClass } from 'class-transformer';
 
 //* Importando o model
 import User from '../models/User'
 
 class UserController {
+  index(req: Request, res: Response){
+    return res.send({ userID: req.userId });
+  }
+
+
   async store(req: Request, res: Response){
     const repository = getRepository(User)
     const { email, password } = req.body;
@@ -19,7 +25,7 @@ class UserController {
     const user = repository.create({ email, password });
     await repository.save(user); //* Essa função de fato faz o insert no DB
 
-    return res.json(user)
+    return res.json(classToClass(user))
   }
 }
 
