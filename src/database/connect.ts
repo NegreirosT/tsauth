@@ -1,4 +1,4 @@
 import { createConnection } from 'typeorm';
 
 createConnection()
-                .then(() => '🗡  Successfully connected with database.');
+                .then(() => console.log('🔥 Successfully connected with database.'));

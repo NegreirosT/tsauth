@@ -1,9 +1,9 @@
 {
   "type": "postgres",
-  "host": "localhost",
+  "host": "10.58.66.174",
   "port": 5432,
-  "username": "test",
-  "password": "P@ssword",
+  "username": "postgres",
+  "password": "P@ssw0rd",
   "database": "tsauth",
   "logging": false,
   "entities": [
