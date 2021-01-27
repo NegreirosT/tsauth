@@ -1,4 +1,4 @@
-## Create a API with a TypeScript :rocket
+## Create a API with a TypeScript :rocket:
 
 ## Technologies used
 
